@@ -1,4 +1,4 @@
-## Projeto TCC - IFMG - Campus Ouro Branco
+## Projeto Para Coleta de Dados Web
 
 ### Descrição
 
