@@ -1,4 +1,4 @@
-## Projeto Para Coleta de Dados Web
+## Projeto para coleta de dados textuais do site reclame aqui
 
 ### Descrição
 
