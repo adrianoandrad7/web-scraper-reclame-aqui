@@ -1,4 +1,4 @@
-# Web Scraper para obter reclamações do site Reclame Aqui
+# Web Scraper para Coleta de Reclamações no Site Reclame Aqui
 
 Este é um projeto Python que realiza a raspagem de reclamações no site do Reclame Aqui. Ele coleta informações sobre reclamações, no nosso contexto reclmações sobre idosos nos em planos de súde.
 
