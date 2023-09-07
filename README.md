@@ -19,7 +19,6 @@ pip install -r requirements.txt
 | beautifulsoup4    | 4.12.2   | [Documentação do BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) |
 | requests          | 2.31.0   | [Documentação do requests](https://docs.python-requests.org/en/latest/)          |
 
-
 ## Como usar
 
 Antes de executar o projeto, siga as etapas abaixo para configurar a URL de pesquisa específica da empresa cujas reclamações deseja obter:
@@ -36,10 +35,11 @@ Antes de executar o projeto, siga as etapas abaixo para configurar a URL de pesq
 
 ## Configurando a URL de Pesquisa
 
-Agora, substitua a URL na variável `base_url` no arquivo `main.py` pela URL que você copiou após a pesquisa. Isso garantirá que o web scraper colete reclamações da empresa específica que você escolheu.
+Agora, substitua a URL na variável `base_url` no arquivo `main.py` pela URL que você copiou após a pesquisa. Lembre-se de remover o número da página e adicionar `{}`. Isso permitirá que o web scraper colete todas as reclamações da sua pesquisa, incluindo todas as páginas.
 
+Exemplo:
 ```python
-base_url = "URL_COPIADA"
+base_url = "https://www.reclameaqui.com.br/empresa/sulamerica-saude/lista-reclamacoes/?busca=idoso&pagina={}"
 ```
 
 ## Execute o cod
