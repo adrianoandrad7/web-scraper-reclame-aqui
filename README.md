@@ -1,38 +1,68 @@
-## Projeto para coleta de dados textuais do site reclame aqui
+# Web Scraper para obter reclamações do site Reclame Aqui
 
-### Descrição
+Este é um projeto Python que realiza a raspagem de reclamações no site do Reclame Aqui. Ele coleta informações sobre reclamações, no nosso contexto reclmações sobre idosos nos em planos de súde.
 
-O objetivo deste projeto é extrair reclamações relacionadas a planos de saúde feitas por idosos no site do Reclame Aqui.
+## Pré-requisitos
 
-### Tecnicas
+Antes de usar este projeto, certifique-se de ter o Python instalado no seu sistema. Você pode instalar as bibliotecas necessárias usando o `pip`:
 
-Raspagem de dados utilizando a biblioteca [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+## Instalação de Dependências
 
-### Instalação Windows
-
-- Instalar o [Python](https://www.python.org/downloads/)
-
-### Linguagem 
-
-- [Python](https://www.python.org/)
-
-### Bibliotecas
-
-- Instalar a biblioteca [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+Você pode instalar as bibliotecas necessárias usando o `pip` e o arquivo `requirements.txt` onde contém todas as bibliotecas necessárias fornecido:
 
 ```bash
-pip install beautifulsoup4
+pip install -r requirements.txt
 ```
 
-- Instalar a biblioteca [Requests](https://requests.readthedocs.io/en/master/)
+| Biblioteca        | Versão   | Documentação                                  |
+|-------------------|----------|-----------------------------------------------|
+| beautifulsoup4    | 4.12.2   | [Documentação do BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) |
+| requests          | 2.31.0   | [Documentação do requests](https://docs.python-requests.org/en/latest/)          |
+
+
+## Como usar
+
+Antes de executar o projeto, siga as etapas abaixo para configurar a URL de pesquisa específica da empresa cujas reclamações deseja obter:
+
+1. Vá para o site Reclame Aqui (https://www.reclameaqui.com.br).
+
+2. Pesquise a empresa da qual deseja coletar reclamações utilizando a barra de pesquisa do site.
+
+3. Na página da empresa, vá para a aba "Reclamações".
+
+4. Se desejar, adicione tags específicas para a pesquisa de reclamações na empresa.
+
+5. Após realizar a pesquisa, copie a URL do navegador.
+
+## Configurando a URL de Pesquisa
+
+Agora, substitua a URL na variável `base_url` no arquivo `main.py` pela URL que você copiou após a pesquisa. Isso garantirá que o web scraper colete reclamações da empresa específica que você escolheu.
+
+```python
+base_url = "URL_COPIADA"
+```
+
+## Execute o cod
+
+Clone o repositório:
 
 ```bash
-pip install requests
+ git clone https://github.com/adrianoandrad7/Raspagem-ReclameAqui.git
 ```
 
-- Instalar a biblioteca [Pandas](https://pandas.pydata.org/)
+Execute o código Python:
 
 ```bash
-pip install pandas
+python main.py
 ```
 
+## Personalização
+
+Você pode personalizar este projeto ajustando as configurações no arquivo main.py:
+
+* `base_url`: URL base para a pesquisa de reclamações.
+* `headers`: Cabeçalhos HTTP para a solicitação.
+* `coleta_link`: Função para coletar links de reclamações.
+* `coleta_reclamacao`: Função para coletar informações detalhadas de reclamações.
+* `salva_csv`: Função para salvar os dados coletados em um arquivo CSV.
+* `coleta_pag_max`: Função para coletar o número máximo de páginas.
