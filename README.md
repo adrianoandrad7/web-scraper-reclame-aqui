@@ -18,6 +18,7 @@ pip install -r requirements.txt
 |-------------------|----------|-----------------------------------------------|
 | beautifulsoup4    | 4.12.2   | [Documentação do BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) |
 | requests          | 2.31.0   | [Documentação do requests](https://docs.python-requests.org/en/latest/)          |
+selenium | 4.1.0 | [Documentação do Selenium](https://www.selenium.dev/documentation/) |
 
 ## Como usar
 
@@ -35,11 +36,11 @@ Antes de executar o projeto, siga as etapas abaixo para configurar a URL de pesq
 
 ## Configurando a URL de Pesquisa
 
-Agora, substitua a URL na variável `base_url` no arquivo `main.py` pela URL que você copiou após a pesquisa. Lembre-se de remover o número da página e adicionar `{}`. Isso permitirá que o web scraper colete todas as reclamações da sua pesquisa, incluindo todas as páginas.
+Agora, substitua a URL na variável `base_url` no arquivo `main.py` pela URL que você copiou após a pesquisa. Lembre-se de remover o número da página. Isso permitirá que o web scraper colete todas as reclamações da sua pesquisa, incluindo todas as páginas.
 
 Exemplo:
 ```python
-base_url = "https://www.reclameaqui.com.br/empresa/sulamerica-saude/lista-reclamacoes/?busca=idoso&pagina={}"
+base_url = "https://www.reclameaqui.com.br/empresa/sulamerica-saude/lista-reclamacoes/?busca=idoso&pagina="
 ```
 
 ## Execute o cod
@@ -66,3 +67,4 @@ Você pode personalizar este projeto ajustando as configurações no arquivo mai
 * `coleta_reclamacao`: Função para coletar informações detalhadas de reclamações.
 * `salva_csv`: Função para salvar os dados coletados em um arquivo CSV.
 * `coleta_pag_max`: Função para coletar o número máximo de páginas.
+* `processar_paginas`: Principal função reponsável por processar as páginas, coletar e salvar as reclamações em um arquivo csv.
