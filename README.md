@@ -8,7 +8,7 @@ Antes de usar este projeto, certifique-se de ter o Python instalado no seu siste
 
 ## Instalação de Dependências
 
-Você pode instalar as bibliotecas necessárias usando o `pip` e o arquivo `requirements.txt` onde contém todas as bibliotecas necessárias fornecido:
+Você pode instalar as bibliotecas necessárias usando o `pip` e o arquivo `requirements.txt` onde contém todas as bibliotecas necessárias:
 
 ```bash
 pip install -r requirements.txt
